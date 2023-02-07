@@ -1,0 +1,31 @@
+@mixin max-mobile {
+  @media (max-width: $mobile) { @content; }
+}
+
+@mixin mobile-up {
+  @media (min-width: $mobile) { @content; }
+}
+
+@mixin tablet-up {
+  @media (min-width: $tablet) { @content; }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desktop) { @content; }
+}
+
+@mixin max-tablet {
+  @media (max-width: $tablet) { @content; }
+}
+
+@mixin max-desktop {
+  @media (max-width: $desktop) { @content; }
+}
+
+@mixin max-desktop-lg {
+  @media (max-width: $desktop-lg) { @content; }
+}
+
+@mixin desktop-lg-up {
+  @media (min-width: $desktop-lg) { @content; }
+}

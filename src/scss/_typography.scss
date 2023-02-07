@@ -1,0 +1,10 @@
+// Copy the code block for different font weights
+
+@font-face {
+  font-family: family-name;
+  src:
+    url("../fonts/font-file.woff2") format("woff2"),
+    url("../fonts/fonts/font-file.ttf")  format("truetype");
+  font-weight: 000;
+}
+
