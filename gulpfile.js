@@ -73,6 +73,11 @@ gulp.task('copy-fonts', ()=> {
 		.pipe(gulp.dest('dist/fonts'));
 });
 
+// copy images files to dist
+gulp.task('copy-images', ()=> {
+	return gulp.src('images/*')
+		.pipe(gulp.dest('dist/images'));
+});
 
 // browser sync task
 gulp.task('watch', ()=> {
@@ -87,7 +92,7 @@ gulp.task('watch', ()=> {
 });
 
 //build project
-gulp.task('project-build', gulp.series('iconfont', 'copy-fonts', 'scss-lint', 'scss', 'copy-js', 'copy-html'));
+gulp.task('project-build', gulp.series('iconfont', 'copy-fonts', 'scss-lint', 'scss', 'copy-js', 'copy-html', 'copy-images'));
 
 //to run watch task type: gulp
 gulp.task('default', gulp.series('watch'));
