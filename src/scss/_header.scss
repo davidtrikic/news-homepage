@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 72px 0;
+
+  @include max-tablet {
+    padding: 30px 0;
+  }
+}
+
+.logo__img {
+  @include max-mobile {
+    width: 40px;
+  }
+}
+
+.header__main-nav {
+  display: flex;
+  align-items: center;
+
+  @include max-tablet {
+    display: none;
+  }
+
+  a:hover {
+    color: $red;
+    transition: 0.2s all;
+  }
+}
+
+.header__main-nav ul {
+  display: flex;
+
+  li {
+    margin: auto 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.header__nav-button {
+  align-items: center;
+  display: none;
+
+  @include max-tablet {
+    display: flex;
+  }
+}

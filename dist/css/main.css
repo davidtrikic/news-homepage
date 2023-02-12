@@ -108,12 +108,99 @@ textarea {
 }
 
 @font-face {
-  font-family: family-name;
-  src: url("../fonts/font-file.woff2") format("woff2"), url("../fonts/fonts/font-file.ttf") format("truetype");
-  font-weight: 0;
+  font-family: Inter;
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
 }
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+body {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  color: #5d5f79;
+}
+
 .container {
-  max-width: min(1260px, 96%);
-  min-width: 240px;
-  margin: 0 20px;
+  max-width: min(1110px, 96%);
+  min-width: 150px;
+  margin: auto;
+}
+@media (max-width: 960px) {
+  .container {
+    margin: 0 16px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 72px 0;
+}
+@media (max-width: 760px) {
+  .header {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo__img {
+    width: 40px;
+  }
+}
+
+.header__main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 760px) {
+  .header__main-nav {
+    display: none;
+  }
+}
+.header__main-nav a:hover {
+  color: #f15e50;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.header__main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__main-nav ul li {
+  margin: auto 1rem;
+}
+.header__main-nav ul li:last-child {
+  margin-right: 0;
+}
+
+.header__nav-button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+@media (max-width: 760px) {
+  .header__nav-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
